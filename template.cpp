@@ -12,7 +12,18 @@ typedef pair<int,int> pi;
 #define MP make_pair
 #define REP(i,a,b) for (int i = a; i <= b; i++)
 #define SQ(a) a*a
+#define deb(x) cout << #x << " " << x << endl;
 
+//io process
+template<typename... T>
+void read(T&... args) {
+	((cin >> args), ...);
+}
+
+template<typename... T>
+void write(T&&... args) { //rvalue reference is new to C++ 
+	((cout << args << " "), ...);
+}
 
 using namespace std;
 
