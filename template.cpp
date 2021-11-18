@@ -14,15 +14,10 @@ typedef pair<int,int> pi;
 #define SQ(a) a*a
 #define deb(x) cout << #x << " " << x << endl;
 
-//io process
-template<typename... T>
-void read(T&... args) {
-	((cin >> args), ...);
-}
-
-template<typename... T>
-void write(T&&... args) { //rvalue reference is new to C++ 
-	((cout << args << " "), ...);
+// graph code
+add_edge(vector<int> adj[], int u, int v, bool biDirection) {
+	adj[u].push_back(v);
+	if(biDirection) adj[v].push_back(u);
 }
 
 using namespace std;
